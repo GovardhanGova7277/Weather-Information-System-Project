@@ -1,0 +1,28 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Records</title>
+</head>
+<body>
+    <h1>View Records From Database</h1>
+    {%for record in records%}
+        <div><h3 style="color: purple;">CITY ID: {{record.id}}</h3></div>
+        <div><h3 style="color: purple;">CITY NAME: {{record.cityName}}</h3></div>
+        <div><h3 style="color: purple;">TEMPERATURE: {{record.temperature}}</h3></div>
+        <div><h3 style="color: purple;">PRESSURE: {{record.pressure}}</h3></div>
+        <div><h3 style="color: purple;">RAIN POSSIBILTY: {{record.rainPossibility}}</h3></div>
+        <div><h3 style="color: purple;">RAIN AMOUNT in MM: {{record.amountOfRain}}</h3></div>
+        <div><h3 style="color: purple;">DESCRIPTION: {{record.description}}</h3></div>
+        <div><h3 style="color: purple;">IMAGE: <img src = "{%static record.image_path %}" width = 100/> </h3></div>
+        <hr/>
+    {%endfor%}
+
+    <hr/>
+
+    <a href="{%url 'index_page'%}">Main Menu</a>
+
+</body>
+</html>

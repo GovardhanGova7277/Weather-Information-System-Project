@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATABASE CONNECTIVITY WITH DJANGO ORM</title>
+    <style>
+        h1{
+            width:1250px;
+            height:50px;
+            padding: 10px;
+            border-radius: 20px;
+            background-color: burlywood;
+            color: azure;
+        }
+    </style>
+</head>
+<body>
+    <h1 onclick="func()">DATABASE CONNECTIVITY WITH DJANGO ORM</h1>
+    <h2>Main Menu</h2>
+    <ul>
+        <li><a href="{%url 'register_page'%}">Add Info</a></li>
+        <li><a href="{%url 'view_page'%}">View Info</a></li>
+        <li><a href="{%url 'disp_page'%}">View Cities</a></li>
+    </ul>
+
+    <form action="" method="POST">
+        {%csrf_token%}
+        {{form}}
+        <br/>
+        <input type="submit"/>
+    </form>
+    <script>
+        function func(){
+            alert('welcome')
+        }
+    </script>
+</body>
+</html>

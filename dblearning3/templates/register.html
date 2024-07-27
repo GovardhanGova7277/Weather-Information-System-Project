@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert a Record Into Table</title>
+</head>
+<body>
+    <h1>Database Connectivity through ORM project</h1>
+    <h3>Inserting Record To Database each time i visit this URL</h3>
+
+    <form action="" method="post">
+        {%csrf_token%}
+        <table>
+            <tr>
+                <td>
+                    <p style="color: purple;font-size: 16px;">City Name:</p>
+                    <input type="text" name="cname" placeholder="Enter City Name" required/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p style="color: purple;font-size: 16px;">Temperature:</p>
+                    <input type="text" name="temp" placeholder="Enter Temperature" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="color: purple;font-size: 16px;">Pressure:</p>
+                    <input type="text" name="prsr" placeholder="Enter Pressure" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="color: purple;font-size: 16px;">Rain Possibility:</p>
+                    <input type="radio" name="rainStatus" value="True" /> Rain
+                    <input type="radio" name="rainStatus" value="False" checked/> No Rain
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="color: purple;font-size: 16px;">Amount of Rain in mm:</p>
+                    <input type="number" name="amtOfRain" placeholder="Enter Amount of Rain in mm" value="0"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="color: purple;font-size: 16px;">Description:</p>
+                    <textarea name="desc" placeholder="Enter Description" required>
+                        
+                    </textarea>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Save Weather Info"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+    {%if messages%}
+        {%for message in messages%}
+            {{message}}
+        {%endfor%}
+    {%endif%}
+
+    <br/>
+
+    {{obj}}
+
+    <hr/>
+
+    <a href="{%url 'index_page'%}">Main Menu</a>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Records</title>
+</head>
+<body>
+    <h1>Search Records From Database</h1>
+        
+        <div><h3 style="color: purple;">CITY ID: {{record.id}}</h3></div>
+        <div><h3 style="color: purple;">CITY NAME: {{record.cityName}}</h3></div>
+        <div><h3 style="color: purple;">TEMPERATURE: {{record.temperature}}</h3></div>
+        <div><h3 style="color: purple;">PRESSURE: {{record.pressure}}</h3></div>
+        <div><h3 style="color: purple;">RAIN POSSIBILTY: {{record.rainPossibility}}</h3></div>
+        <div><h3 style="color: purple;">RAIN AMOUNT in MM: {{record.amountOfRain}}</h3></div>
+        <div><h3 style="color: purple;">DESCRIPTION: {{record.description}}</h3></div>
+    
+        <hr/>
+
+        <a href="{%url 'index_page'%}">Main Menu</a>  <br/><br/>
+        <a href="{%url 'disp_page'%}">Go Back</a>  <br/>
+    
+</body>
+</html>
